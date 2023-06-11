@@ -1,3 +1,6 @@
+import DesktopNavBar from './components/DesktopNavBar'
+import MobileNavbar from './components/MobileNavbar'
+import Footer from './components/Footer'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -11,7 +14,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="tm-header">
+          <div className="header-desktop"><DesktopNavBar/></div>
+          <div className="header-mobile"><MobileNavbar/></div>
+        </div>
+        
+        {children}
+        <footer className="">
+          <Footer/>
+        </footer>
+        </body>
     </html>
   )
 }
