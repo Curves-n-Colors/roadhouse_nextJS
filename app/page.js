@@ -1,7 +1,8 @@
 export default function Home() {
   return (
     <>
-    <div className="home-content">HOME PAGE</div>
+    
+    <div className="bg-primary text-inverse">text</div>
     </>
   )
 }
